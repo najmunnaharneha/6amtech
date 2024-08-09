@@ -1,3 +1,45 @@
 (function ($) {
    "use strict";
+
+   $(document).ready(function () {
+      var $productTabs = $("#productTabs");
+      var $arrowLeft = $(".arrow-left");
+      var $arrowRight = $(".arrow-right");
+
+      function updateArrows() {
+         var scrollLeft = $productTabs.scrollLeft();
+         var maxScrollLeft = $productTabs[0].scrollWidth - $productTabs.outerWidth();
+
+         if (scrollLeft > 0) {
+            $arrowLeft.show();
+         } else {
+            $arrowLeft.hide();
+         }
+
+         if (scrollLeft < maxScrollLeft) {
+            $arrowRight.show();
+         } else {
+            $arrowRight.hide();
+         }
+
+         // Hide arrows if all items are visible
+         if ($productTabs[0].scrollWidth <= $productTabs.outerWidth()) {
+            $arrowLeft.hide();
+            $arrowRight.hide();
+         }
+      }
+
+      $arrowLeft.on("click", function () {
+         $productTabs.animate({ scrollLeft: "-=100px" }, "smooth", updateArrows);
+      });
+
+      $arrowRight.on("click", function () {
+         $productTabs.animate({ scrollLeft: "+=100px" }, "smooth", updateArrows);
+      });
+
+      $productTabs.on("scroll", updateArrows);
+      $(window).on("resize", updateArrows);
+
+      updateArrows();
+   });
 })(jQuery);

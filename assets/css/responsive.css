@@ -1,12 +1,62 @@
 @media only screen and (min-width: 1500px) {
 }
 @media only screen and (max-width: 1199px) {
+   .product-grid {
+      grid-template-columns: repeat(4, 1fr);
+   }
 }
 @media only screen and (max-width: 991px) {
+   .newsletter-contents {
+      grid-template-columns: repeat(3, 1fr);
+   }
+   .newsletter-contents .content-single:nth-child(3n)::after {
+      border-right: none;
+   }
+   .mail-box {
+      margin-top: 30px;
+   }
+   .footer-info {
+      text-align: center;
+   }
+   .footer-info .footer-text p {
+      width: 100%;
+   }
+   .footer-image {
+      text-align: center;
+      margin-top: 30px;
+   }
 }
 @media only screen and (max-width: 767px) {
+   .footer-social {
+      position: static;
+      transform: unset;
+   }
+   .footer-hotline {
+      justify-content: center;
+      margin-top: 20px;
+   }
+   .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .product-tabs {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      justify-content: start;
+      flex-wrap: nowrap;
+   }
 }
 @media only screen and (max-width: 575px) {
+   .newsletter-contents {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .newsletter-contents .content-single:nth-child(3n)::after {
+      border-right: 0.5px solid rgba(0, 0, 0, 0.3);
+   }
+   .newsletter-contents .content-single:nth-child(2n)::after,
+   .newsletter-contents .content-single:nth-child(4n)::after {
+      display: none;
+   }
 }
 @media only screen and (max-width: 479px) {
 }
