@@ -27,6 +27,16 @@
    }
 }
 @media only screen and (max-width: 767px) {
+   .offer-modal .close {
+      left: 10px;
+   }
+   .offer-modal .close img {
+      width: 20px;
+      height: 20px;
+   }
+   .offer-modal h6 {
+      width: 80%;
+   }
    .footer-social {
       position: static;
       transform: unset;
