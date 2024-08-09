@@ -204,11 +204,15 @@ ul {
  *************************************/
 .offer-modal {
    background: url(../images/offer-modal.png) no-repeat center center;
-   padding: 12px;
    display: flex;
    justify-content: center;
    align-items: center;
    position: relative;
+   height: 40px;
+   overflow: hidden;
+   transition: height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+   opacity: 1;
+   transform: scale(1);
 }
 .offer-modal .close {
    position: absolute;
@@ -224,10 +228,10 @@ ul {
    height: 30px;
 }
 .offer-modal:focus-within {
+   height: 0;
    opacity: 0;
    transform: scale(0.9);
    pointer-events: none;
-   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .offer-modal_title {
    display: flex;
@@ -297,8 +301,8 @@ ul {
    color: #ffffff;
 }
 .top-right .option a img {
-   width: 16px;
-   height: 16px;
+   width: 10px;
+   height: 10px;
 }
 .top-right .social {
    display: flex;
@@ -423,6 +427,146 @@ ul {
    top: -10px;
    display: flex;
    justify-content: center;
+}
+
+/* header bottom */
+.header-bottom {
+}
+.header-bottom .navbar-toggler {
+   margin: 0;
+   padding: 0;
+}
+.header-bottom .navbar-toggler i {
+   font-size: 30px;
+   color: var(--color-hover);
+}
+.header-bottom .navbar-toggler:focus {
+   border: none;
+   outline: none;
+   box-shadow: none;
+}
+.header-bottom .visible-drowndon {
+}
+.header-bottom .dropdown-menu {
+   display: block;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   z-index: 1000;
+   border-radius: 0;
+   border: none;
+   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+   width: 100%;
+}
+.header-bottom .dropdown-menu li {
+   margin-left: 15px;
+   margin-right: 23px;
+}
+.header-bottom .dropdown-menu li:not(:last-child) {
+   border-bottom: 1px solid rgba(222, 222, 222, 0.5);
+}
+.header-bottom .dropdown-menu li a {
+   font-size: 13px;
+   line-height: 16.32px;
+   font-weight: 500;
+   color: var(--color-black);
+   padding: 16px 0;
+   position: relative;
+}
+.header-bottom .dropdown-menu li a::after {
+   content: "\f054";
+   font-family: "FontAwesome";
+   font-weight: 900;
+   position: absolute;
+   right: 0;
+   display: inline-block;
+   font-size: 10px;
+}
+.header-bottom .dropdown-item:focus,
+.header-bottom .dropdown-item:hover,
+.header-bottom .dropdown-item:active {
+   background-color: transparent;
+   color: var(--color-hover);
+}
+.header-bottom .container {
+   position: relative;
+}
+
+.header-bottom.nav-collapsed .dropdown-menu {
+   display: none;
+}
+
+.header-bottom .navbar-collapse {
+   display: flex !important;
+}
+.header-bottom .navbar {
+   border-top: 1px solid #b9b9b933;
+   border-bottom: 1px solid #b9b9b933;
+   margin: 0;
+   padding: 0;
+}
+.header-bottom .visible-drowndon {
+}
+.header-bottom .visible-drowndon button {
+   background-color: var(--color-hover);
+   color: #ffffff;
+   /* min-width: 269px; */
+   padding: 20px;
+   height: 55px;
+   border-radius: 0;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 17.57px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.header-bottom .visible-drowndon button span {
+   margin-left: 16px;
+}
+.header-bottom .visible-drowndon button::after {
+   display: inline-block;
+   margin-left: 60px;
+   padding-left: 20px;
+   content: url(../images/icons/arrow-bottom-white.svg);
+   vertical-align: 0.255em;
+   width: 30px;
+   height: 30px;
+   line-height: 25px;
+   border-top: 0;
+   border-right: 0;
+   border-bottom: 0;
+   border-left: 0;
+}
+
+.header-bottom .navbar-nav {
+   margin-left: 55px;
+}
+.header-bottom .navbar-nav {
+}
+.header-bottom .navbar-nav li {
+}
+.header-bottom .navbar-nav li a {
+   font-size: 13px;
+   font-weight: 600;
+   line-height: 16.32px;
+   color: var(--color-black);
+   margin-right: 15px;
+}
+.header-bottom .navbar-nav li a i {
+   margin-left: 10px;
+   font-size: 10px;
+}
+.header-bottom .navbar-nav li a img {
+   margin-left: 10px;
+   width: 15px;
+   height: 15px;
+}
+.header-bottom .navbar-nav li a:hover {
+   color: var(--color-hover);
+}
+.offcanvas-header {
+   border-bottom: 0.5px solid #f2f3f4;
 }
 
 /**************************************

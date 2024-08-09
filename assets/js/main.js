@@ -43,3 +43,12 @@
       updateArrows();
    });
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", function () {
+   const browseCategoryButton = document.querySelector(".btn-group .btn");
+   const headerBottom = document.querySelector(".header-bottom");
+
+   browseCategoryButton.addEventListener("click", function () {
+      headerBottom.classList.toggle("nav-collapsed");
+   });
+});
