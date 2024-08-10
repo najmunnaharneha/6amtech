@@ -105,6 +105,13 @@
    .newsletter-contents .content-single:nth-child(4n)::after {
       display: none;
    }
+   .product-hover-icons {
+      flex-direction: row;
+      align-items: center;
+   }
+   .product-hover-icons .hover-icon {
+      margin-right: 0;
+   }
 }
 @media only screen and (max-width: 479px) {
 }
