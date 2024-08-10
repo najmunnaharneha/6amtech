@@ -213,6 +213,14 @@ ul {
    opacity: 1;
    transform: scale(1);
 }
+
+.offer-modal.hidden {
+   height: 0;
+   opacity: 0;
+   transform: scale(0.9);
+   pointer-events: none;
+}
+
 .offer-modal .close {
    position: absolute;
    left: 60px;
@@ -220,19 +228,14 @@ ul {
    transform: translateY(-50%);
    border: none;
    background: transparent;
+   cursor: pointer;
 }
 
 .offer-modal .close img {
    width: 30px;
    height: 30px;
 }
-.offer-modal:focus-within {
-   height: 0;
-   opacity: 0;
-   transform: scale(0.9);
-   pointer-events: none;
-   overflow: hidden;
-}
+
 .offer-modal_title {
    display: flex;
    justify-content: center;

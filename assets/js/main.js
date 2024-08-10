@@ -3,25 +3,16 @@
 
    $(document).ready(function () {
       // ---- Product tab start
-      var $productTabs = $("#productTabs");
-      var $arrowLeft = $(".arrow-left");
-      var $arrowRight = $(".arrow-right");
+      const $productTabs = $("#productTabs");
+      const $arrowLeft = $(".arrow-left");
+      const $arrowRight = $(".arrow-right");
 
       function updateArrows() {
-         var scrollLeft = $productTabs.scrollLeft();
-         var maxScrollLeft = $productTabs[0].scrollWidth - $productTabs.outerWidth();
+         const scrollLeft = $productTabs.scrollLeft();
+         const maxScrollLeft = $productTabs[0].scrollWidth - $productTabs.outerWidth();
 
-         if (scrollLeft > 0) {
-            $arrowLeft.show();
-         } else {
-            $arrowLeft.hide();
-         }
-
-         if (scrollLeft < maxScrollLeft) {
-            $arrowRight.show();
-         } else {
-            $arrowRight.hide();
-         }
+         $arrowLeft.toggle(scrollLeft > 0);
+         $arrowRight.toggle(scrollLeft < maxScrollLeft);
 
          // Hide arrows if all items are visible
          if ($productTabs[0].scrollWidth <= $productTabs.outerWidth()) {
@@ -45,18 +36,21 @@
       // ------ Product tab end
 
       // ------ Dropdown menu start
+      const $browseCategoryButton = $("#browseCategoryButton");
+      const $headerBottom = $("#headerBottom");
+
       $browseCategoryButton.on("click", function () {
          $headerBottom.toggleClass("nav-collapsed");
       });
       // ------ Dropdown menu end
+
+      // ------ Offer Modal start
+      const closeModalButton = $("#closeModal");
+      const offerModal = $("#offerModal");
+
+      closeModalButton.on("click", function () {
+         offerModal.addClass("hidden");
+      });
+      // ------ Offer Modal end
    });
 })(jQuery);
-
-document.addEventListener("DOMContentLoaded", function () {
-   const browseCategoryButton = document.querySelector(".btn-group .btn");
-   const headerBottom = document.querySelector(".header-bottom");
-
-   browseCategoryButton.addEventListener("click", function () {
-      headerBottom.classList.toggle("nav-collapsed");
-   });
-});

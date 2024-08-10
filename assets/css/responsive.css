@@ -31,6 +31,9 @@
    .footer-info {
       text-align: center;
    }
+   .footer-info .footer-logo {
+      margin-top: 10px;
+   }
    .footer-info .footer-text p {
       width: 100%;
    }
