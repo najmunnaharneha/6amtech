@@ -2,6 +2,7 @@
    "use strict";
 
    $(document).ready(function () {
+      // ---- Product tab start
       var $productTabs = $("#productTabs");
       var $arrowLeft = $(".arrow-left");
       var $arrowRight = $(".arrow-right");
@@ -41,6 +42,13 @@
       $(window).on("resize", updateArrows);
 
       updateArrows();
+      // ------ Product tab end
+
+      // ------ Dropdown menu start
+      $browseCategoryButton.on("click", function () {
+         $headerBottom.toggleClass("nav-collapsed");
+      });
+      // ------ Dropdown menu end
    });
 })(jQuery);
 

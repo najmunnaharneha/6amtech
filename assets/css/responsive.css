@@ -7,6 +7,9 @@
    .product-grid {
       grid-template-columns: repeat(4, 1fr);
    }
+   .banner-right {
+      margin-top: 15px;
+   }
 }
 @media only screen and (max-width: 991px) {
    .header-middle {
@@ -40,6 +43,9 @@
    }
 }
 @media only screen and (max-width: 767px) {
+   .banner-contents {
+      margin-left: 0;
+   }
    .offer-modal {
       height: 60px;
    }
