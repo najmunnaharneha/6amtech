@@ -36,21 +36,22 @@
       // ------ Product tab end
 
       // ------ Dropdown menu start
-      const $browseCategoryButton = $("#browseCategoryButton");
-      const $headerBottom = $("#headerBottom");
+      const $browseCategoryButton = $(".btn-group .btn");
+      const $headerBottom = $(".header-bottom");
 
       $browseCategoryButton.on("click", function () {
          $headerBottom.toggleClass("nav-collapsed");
       });
       // ------ Dropdown menu end
-
-      // ------ Offer Modal start
-      const closeModalButton = $("#closeModal");
-      const offerModal = $("#offerModal");
-
-      closeModalButton.on("click", function () {
-         offerModal.addClass("hidden");
-      });
-      // ------ Offer Modal end
    });
+   // ------ Offer Modal start
+   document.addEventListener("DOMContentLoaded", function () {
+      const closeModalButton = document.getElementById("closeModal");
+      const offerModal = document.getElementById("offerModal");
+
+      closeModalButton.addEventListener("click", function () {
+         offerModal.classList.add("hidden");
+      });
+   });
+   // ------ Offer Modal end
 })(jQuery);
